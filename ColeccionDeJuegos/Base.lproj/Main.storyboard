@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" id="jbV-wh-CcO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CQb-Av-Dkm">
                             <connections>
-                                <segue destination="VxV-BK-oa4" kind="show" id="Z7i-I8-DA2"/>
+                                <segue destination="VxV-BK-oa4" kind="show" identifier="juegoSegue" id="Z7i-I8-DA2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -76,16 +76,25 @@
                                     <action selector="agregarTapped:" destination="VxV-BK-oa4" eventType="touchUpInside" id="dyR-7b-gKF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TX-mo-Rh7">
+                                <rect key="frame" x="160.5" y="349" width="55" height="30"/>
+                                <state key="normal" title="Eliminar"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="VxV-BK-oa4" eventType="touchUpInside" id="I3o-Yz-7Ik"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kww-uJ-kCy" firstAttribute="top" secondItem="fSG-ki-Ygl" secondAttribute="bottom" constant="20" id="2gA-Q1-xhm"/>
+                            <constraint firstItem="8TX-mo-Rh7" firstAttribute="top" secondItem="W4e-x6-EfI" secondAttribute="bottom" constant="15" id="JlZ-mF-9xh"/>
                             <constraint firstItem="kww-uJ-kCy" firstAttribute="centerX" secondItem="VP2-Ga-GQD" secondAttribute="centerX" id="JyD-SU-9UX"/>
                             <constraint firstItem="kww-uJ-kCy" firstAttribute="width" secondItem="fSG-ki-Ygl" secondAttribute="width" id="Phg-nb-pdB"/>
                             <constraint firstItem="fSG-ki-Ygl" firstAttribute="centerX" secondItem="VP2-Ga-GQD" secondAttribute="centerX" id="Ss8-1C-o58"/>
                             <constraint firstItem="W4e-x6-EfI" firstAttribute="top" secondItem="kww-uJ-kCy" secondAttribute="bottom" constant="20" id="d8F-NZ-RSL"/>
                             <constraint firstItem="fSG-ki-Ygl" firstAttribute="top" secondItem="5F2-u2-lld" secondAttribute="top" constant="20" id="elJ-SZ-Mjn"/>
                             <constraint firstItem="W4e-x6-EfI" firstAttribute="centerX" secondItem="VP2-Ga-GQD" secondAttribute="centerX" id="hSx-EH-nDH"/>
+                            <constraint firstItem="8TX-mo-Rh7" firstAttribute="centerX" secondItem="VP2-Ga-GQD" secondAttribute="centerX" id="z7r-do-oH4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5F2-u2-lld"/>
                     </view>
@@ -93,7 +102,7 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="camera" id="Rqx-Vc-fFV">
                                 <connections>
-                                    <action selector="camaraTapped:" destination="VxV-BK-oa4" id="ZxI-kD-Gcd"/>
+                                    <action selector="camaraTapped:" destination="VxV-BK-oa4" id="vYG-BA-Bdo"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Fotos" id="Npa-EP-Nfk">
@@ -105,6 +114,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="JuegoImageView" destination="fSG-ki-Ygl" id="RfV-Z3-qWY"/>
+                        <outlet property="agregarActualizarBoton" destination="W4e-x6-EfI" id="InN-ik-03i"/>
+                        <outlet property="eliminarBoton" destination="8TX-mo-Rh7" id="dHo-7O-aQG"/>
                         <outlet property="tituloTextField" destination="kww-uJ-kCy" id="aEc-4o-AGa"/>
                     </connections>
                 </viewController>
